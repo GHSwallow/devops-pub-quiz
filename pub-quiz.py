@@ -2,10 +2,9 @@ from inputimeout import inputimeout
 import random
 import questions
 
-# Welcome message for the quiz
+
 print("Welcome to the Pub Quiz!")
 
-# List of questions, options, and answers
 quiz_questions = questions.questions
 
 users_score = 0
@@ -13,17 +12,13 @@ users_score = 0
 def generate_random_timeout(min=5, max=10):
     return random.randint(min, max)
 
-# Loop through each question
 for question in quiz_questions:
-    # Display the question and options
     print(question["question"])
     for option in question["options"]:
         print(option)
     
-    # Get the user's answer
     try: 
-        user_answer = inputimeout("Your answer (A, B, C, D): ", generate_random_timeout()).strip().upper() # Ensuring the input is uppercase for comparison
-        # Check if the answer is correct
+        user_answer = inputimeout("Your answer (A, B, C, D): ", generate_random_timeout()).strip().upper()
         if user_answer == question["answer"]:
             print("Correct!")
             users_score += 1
@@ -34,8 +29,6 @@ for question in quiz_questions:
         print("\n I'm sorry, you're just really slow at this \n") 
 
 
-# Print score
 print(f"You scored {users_score}/{len(quiz_questions)}")
 
-# Goodbye message
 print("Thanks very much for playing the Pub Quiz!")

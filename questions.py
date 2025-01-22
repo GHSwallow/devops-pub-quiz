@@ -28,6 +28,5 @@ questions = [
         "question": "Who didn't win the FIFA World Cup in 2022?",
         "options": ["A) Lionel Messi", "B) The planet", "C) Argentina", "D) FIFA's bank account"],
         "answer": "B"
-    },
-    # Learners can add more questions here following the same structure
+    }
 ]
