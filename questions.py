@@ -34,5 +34,4 @@ questions = [
         "options": ["A) C, B) A, C) D, D) B"],
         "answer": "B"
     }
-    # Learners can add more questions here following the same structure
 ]
